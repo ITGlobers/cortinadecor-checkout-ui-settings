@@ -1,0 +1,231 @@
+@font-face {
+  font-family : Cortinadecor Icons;
+  src         : url(assets/fonts/cortinadecor-icons.woff) format("woff");
+  font-weight : 400;
+  font-style  : normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 100;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-ThinItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 100;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-Thin.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 200;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 200;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-ExtraLightItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-Italic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style : normal;
+  src        : url(assets/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style : italic;
+  src        : url(assets/fonts/Montserrat-SemiBoldItalic.ttf);
+}
+
+@font-face {
+  font-family : Raleway;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/raleway/raleway-v13-latin-300.woff2") format("woff2");
+  font-style  : normal;
+  font-weight : 300
+}
+
+@font-face {
+  font-family : Lobster;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Lobster.otf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Indie Flower;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/IndieFlower.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Pacifico;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Pacifico.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Kavoon;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Kavoon.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Peralta;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Peralta.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Henny Penny;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/HennyPenny.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : James Stroker;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/JamesStroker.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Sybil Green;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/SybilGreen.otf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Lemon Milk;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/LemonMilk.otf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Cherl;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Cherl.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Janda Happy Day;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/JandaHappyDay.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Monoton;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Monoton.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Walto Graph;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/WaltoGraph.ttf");
+  font-weight : 400;
+  font-style  : normal
+}

@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+
+body{
+  font-family: 'Montserrat','Verdana', sans-serif;
+  letter-spacing: 1px;
+  background: white;
+}
+
+body::before{
+  display: none;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: #c31632;
+}
+
+header .logo{
+  width: 50%;
+}
+
+header .redirect ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+header .redirect a{
+  text-decoration: none;
+  color: white;
+
+}
+
+header .redirect .languajes ul{
+  display: flex;
+  gap: 10px;
+}
+
+header .redirect .languajes ul li:nth-child(2){
+  padding: 0 5px;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+}
+
+header .redirect a.active{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.buySteps{
+  padding: 10px;
+  background-color: #fff;
+  color: #545b67;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+}
+
+.buySteps ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+}
+
+.buySteps ul li.current{
+  color: #c31632;
+}
+
+.buySteps ul li svg{
+  width: 2rem;
+}
+
+.buySteps ul li:nth-child(1),
+.buySteps ul li:nth-child(3),
+.buySteps ul li:nth-child(5),
+.buySteps ul li:nth-child(7){
+  margin-bottom: 7px;
+}
+
+.buySteps ul li a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  color: inherit;
+}
+
+.preFooter{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.preFooter a{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  color: black;
+  text-decoration: underline;
+}
+
+.preFooter a:hover{
+  color: black;
+}
+
+.preFooter a .preFooter-icon{
+  width: 1rem;
+  padding-top: 5px;
+}
+
+footer{
+  background-color: #c31632;
+  padding: 0 10%
+}
+
+footer .social{
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1.5rem 0;
+}
+
+footer .social .icon{
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+footer .social .icon::before{
+  font-style: normal;
+  font-weight: 400;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings: "liga";
+  vertical-align: middle;
+}
+
+footer .copyright{
+  text-align: center;
+  color: white;
+}
+
+footer .copyright p{
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+footer .copyright p a{
+  color: white;
+  text-decoration: none;
+}
+
+/*---------------------TABLET-------------------*/
+
+@media screen and (min-width: 768px) {
+  header .logo{
+    width: 25%;
+  }
+}
+
+/*---------------------DESKTOP------------------*/
+@media screen and (min-width: 1024px) {
+  header .logo{
+    width: 15%;
+  }
+}
