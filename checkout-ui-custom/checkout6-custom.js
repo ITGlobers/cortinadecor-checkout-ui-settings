@@ -36,23 +36,6 @@ let steps = {
 }
 
 //-----------Observer Config to floatign button----------//
-let setMutationObrserver = () => {
-  let target = document.querySelector('td.monetary[data-bind="text: totalLabel"]');
-  let floatingPrice = document.querySelector('.floatingButton .priceContainer')
-  floatingPrice.innerHTML = target.innerHTML;
-
-  const changePrice = (mutationList, observer) => {
-    floatingPrice.innerHTML = target.innerHTML;
-  }
-
-  const config = { attributes: false, childList: true, subtree: true };
-
-  const observer = new MutationObserver(changePrice);
-
-  observer.observe(target,config);
-
-}
-
 let setIntersectionObrserver = () => {
   let target = document.querySelector('.cart-links.cart-links-bottom');
   let floatingPrice = document.querySelector('.floatingButton')
@@ -80,11 +63,21 @@ let setIntersectionObrserver = () => {
 let interval = setInterval(function(){
   if(document.querySelector('.loading.loading-bg').style.display === "none"){
     clearInterval(interval);
-    setMutationObrserver();
-    setIntersectionObrserver();
-    document.querySelector('footer').style.paddingBottom = document.querySelector('.floatingButton').clientHeight+32+"px";
+    if(innerWidth < 1000){
+      setIntersectionObrserver();
+      document.querySelector('footer').style.paddingBottom = document.querySelector('.floatingButton').clientHeight+32+"px";
+    }
   }
 },500);
+
+let adjustPrice = () => {
+  let reference = document.querySelector('td.monetary[data-bind="text: totalLabel"]');
+  let priceContainer = document.querySelector('.floatingButton .price .priceContainer');
+
+  priceContainer.innerHTML = reference.innerHTML;
+}
+
+
 
 //-----------END----------//
 
@@ -152,11 +145,68 @@ let moveTrustValues = () => {
   seals.style.display = "block";
 }
 
+let messageManufacturing = () => {
+  if(document.querySelectorAll('.table.cart-items .product-item').length !== 0){
+    let reference = document.querySelector('.cart-template .cart');
+    let container = document.createElement('div');
+    container.classList.add('manufacturingContainer');
+    let toInsert = '';
+    toInsert += ' <div class="description">';
+    toInsert += '   <div>'
+    toInsert += '     <h3 class="description-title">24H Manufacturing</h3>';
+    toInsert += '     <p class="description-content">';
+    toInsert += '       Activate manufacturing in 24 hours and get priority on your order';
+    toInsert += '       <b>just for</b> <span class="servicePrice">9.95</span> you can activate <b>manufacturing in 24h</b> for all compatible products <a href="/terms-of-use">Terms and conditions of service</a>';
+    toInsert += '     </p>';
+    toInsert += '   </div>'
+    toInsert += ' </div>';
+    toInsert += ' <div class="conditions">';
+    toInsert += '   <p>';
+    toInsert += '     Order before <b>12:00</b> and we will sending to you <b>tomorrow</b></br><a href="#">Activate</a>';
+    toInsert += '   </p>';
+    toInsert += ' </div>';
+    toInsert += ' <div class="price">';
+    toInsert += '   <p>';
+    toInsert += '     9.95';
+    toInsert += '   </p>';
+    toInsert += ' </div>';
+    container.innerHTML = toInsert;
+    reference.append(container);
+  }else{
+    let reference = document.querySelector('.cart-template .cart');
+    let element = document.querySelector('.manufacturingContainer');
+    if(element !== null){
+      reference.removeChild(element);
+    }
+  }
+}
+
+let summaryTitle = () => {
+  let reference = document.querySelector('div.summary');
+  let toInsert = document.createElement('h3');
+  toInsert.classList.add("summaryTitle");
+  toInsert.innerHTML = "Cart Summary"
+  reference.insertBefore(toInsert, reference.querySelector('div.summary-totalizers'));
+}
+
+$(window).on("orderFormUpdated.vtex", function(){
+  console.log("actualice el checkout");
+  setTimeout(function(){
+    changeProductsheader();
+    adjustPrice();
+    messageManufacturing();
+  },500);
+})
+
 setTimeout(function(){
   couponsHandler();
   addPaymentsIcons();
   changeProductsheader();
   moveTrustValues();
-},1000)
+  if(innerWidth > 1000){
+    summaryTitle();
+  }
+},500)
+
 
 steps.init();
