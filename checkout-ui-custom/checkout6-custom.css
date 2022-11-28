@@ -1,9 +1,133 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap');
+@font-face {
+  font-family : "Cortinadecor Icons";
+  src         : url("https://cortinadecor.vteximg.com.br/arquivos/cortinadecor-icons.woff.css") format("woff");
+  font-weight : 400;
+  font-style  : normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-ThinItalic.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Thin.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Black.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-BlackItalic.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Bold.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-BoldItalic.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 200;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-ExtraLight.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 200;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-ExtraLightItalic.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Light.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 300;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-LightItalic.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Italic.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Medium.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-MediumItalic.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 400;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Regular.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style : normal;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-SemiBold.ttf.css");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style : italic;
+  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-SemiBoldItalic.ttf.css");
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body{
-  font-family: 'Montserrat','Verdana', sans-serif;
+  font-family: "Montserrat","Verdana", sans-serif;
   letter-spacing: 1px;
   background: white;
+  height: 100vh;
 }
 
 body::before{
@@ -16,6 +140,9 @@ header{
   justify-content: space-between;
   padding: 15px;
   background-color: #c31632;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 header .logo{
@@ -58,6 +185,9 @@ header .redirect a.active{
   background-color: #fff;
   color: #545b67;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+  position: sticky;
+  top: 3.7rem;
+  z-index: 3;
 }
 
 .buySteps ul{
@@ -97,6 +227,7 @@ header .redirect a.active{
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 1rem;
+  background-color: #f2f2f9;
 }
 
 .preFooter a{
@@ -112,15 +243,159 @@ header .redirect a.active{
   color: black;
 }
 
-.preFooter a .preFooter-icon{
-  width: 1rem;
-  padding-top: 5px;
+.preFooter a span{
+  display: flex;
+  gap: 5px;
+  line-height: 1.2rem;
+}
+
+.preFooter a span::before{
+  content: "\E822";
+  font-family: "Cortinadecor Icons";
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 footer{
   background-color: #c31632;
-  padding: 0 10%
+  padding: 0 1.2rem;
+  color: white;
+  position: relative;
+  bottom: 0;
 }
+
+footer .links{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+footer .links .dating{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+footer .links .dating .footer-phone{
+  color: inherit;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+
+footer .links .dating .footer-phone i::before{
+  content: "\E86E";
+  font-size: 2rem;
+  font-family: "Cortinadecor Icons";
+  text-decoration: none;
+}
+
+footer .links .dating .calendarDates{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .links .dating .calendarDates .days{
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer .links .dating .calendarDates .hours{
+  font-size: 14px;
+}
+
+footer .links .dating .DatingCTA{
+  display: block;
+  width: 100%;
+  color: #c31632;
+  border: 1px solid #c31632;
+  border-radius: 40px;
+  background-color: white;
+  margin: 15px 0;
+  padding: 14px 0;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: .4s;
+}
+
+footer .links .dating .DatingCTA:hover{
+  color: white;
+  border: 1px solid white;
+  background-color: #c31632;
+}
+
+footer .links .accordion{
+  width: 100%;
+  height: auto;
+  color: white;
+  margin: 1rem 0;
+  padding: 10px 0;
+}
+
+footer .links .accordion .dialogTitle{
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  list-style: none;
+  cursor: pointer;
+}
+
+footer .links .accordion .dialogTitle span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+footer .links .accordion .dialogTitle span::after{
+  content: "\E8A2";
+  font-size: 0.8rem;
+  font-family: "Cortinadecor Icons";
+  font-weight: 400;
+  line-height: 0.8rem;
+  transform: rotate(45deg);
+  transition: all .5s;
+}
+
+footer .links .accordion[open] .dialogTitle span::after{
+  transform: rotate(0deg);
+}
+
+footer .links .accordion .dialogContent{
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+footer .links .accordion .dialogContent ul{
+  list-style: none;
+  margin: 0;
+}
+
+footer .links .accordion .dialogContent ul li{
+  padding: 0.5rem 0;
+}
+
+footer .links .accordion .dialogContent ul li a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 0.8rem;
+  letter-spacing: .3px;
+}
+
+footer .links .accordion .dialogContent ul li a:hover{
+  font-weight: 600;
+}
+
 
 footer .social{
   border-top: 1px solid white;
@@ -176,16 +451,441 @@ footer .copyright p a{
   text-decoration: none;
 }
 
+.summary-template-holder .cart-links-bottom{
+  position: relative;
+  z-index: 2;
+}
+
+#cart-to-orderform{
+  font-size: 0;
+  border-radius: 40px;
+}
+
+#cart-to-orderform::after{
+  content: "NEXT";
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .3px;
+  border-radius: 40px;
+}
+
+.cart-template-holder{
+  background-color: #f2f2f2;
+}
+
+.cart-template-holder .cart{
+  background: #f2f2f2;
+}
+
+.full-cart .cart table.table.cart-items thead{
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.full-cart .cart table.table.cart-items tbody{
+  border-top: 1px solid #c31632;
+  border-bottom: 1px solid #c31632;
+}
+
+.full-cart .cart table.table.cart-items thead div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.full-cart .cart table.table.cart-items thead div.textContainer{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  width: 50%;
+}
+
+.full-cart .cart table.table.cart-items thead div.textContainer h2{
+  border-right: 2px solid black;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  padding-right: 0.2rem;
+  line-height: 1rem;
+}
+
+.full-cart .cart table.table.cart-items thead div.textContainer p{
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.full-cart .cart table.table.cart-items thead .send-cart-link{
+  display: block;
+  color: black;
+  font-weight: 600;
+  font-size: 0.7rem;
+  text-decoration: none;
+  width: 30%;
+}
+
+.full-cart .cart table.table.cart-items thead .send-cart-link i::before{
+  content: "\E85C";
+  font-size: 0.9rem;
+  font-weight: 400;
+  font-family: "Cortinadecor Icons";
+}
+
+.table.cart-items i.icon.icon-remove.item-remove-ico::before{
+  content: "\E88E";
+  font-family: "Cortinadecor Icons";
+  font-size: 1.5rem;
+  color: black;
+}
+
+.table.cart-items td.quantity{
+  border: none;
+}
+
+.table.cart-items td.quantity [id*="item-quantity-"]{
+  border: 1px solid #545b67;
+  height: 32px !important;
+  width: 25px !important;
+  border-radius: 0px;
+}
+
+.table.cart-items td.quantity [id*="item-quantity-change"].item-quantity-change-decrement{
+  font-weight: 400;
+  background-color: white;
+  border: 1px solid #545b67;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.table.cart-items td.quantity [id*="item-quantity-change"].item-quantity-change-increment{
+  font-weight: 400;
+  background-color: white;
+  border: 1px solid #545b67;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.table.cart-items td.quantity .item-quantity-change-decrement i::before,
+.table.cart-items td.quantity .item-quantity-change-increment i::before{
+  font-weight: 400;
+}
+
+.table.cart-items td.product-price .list-price{
+  font-size: 12px;
+  color: black;
+  text-decoration: line-through;
+}
+
+.table.cart-items td.product-price .best-price{
+  font-size: 12px;
+  color: black;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .couponsTitle{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .couponsTitle::after{
+  content: "\E8A2";
+  color: black;
+  font-size: 0.8rem;
+  font-family: "Cortinadecor Icons";
+  font-weight: 400;
+  line-height: 0.8rem;
+  transform: rotate(45deg);
+  transition: all .5s;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper[open] .couponsTitle::after{
+  transform: rotate(0deg);
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap{
+  padding: 0.5rem 0;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span:first-child{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon{
+  width: 50%;
+  color: #545b67;
+  border-radius: 1.7rem;
+  box-shadow: none;
+  border: 1px solid #545b67;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon::placeholder{
+  color: #545b67;
+  opacity: 1;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon:active,
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon:focus{
+  border-bottom-color: #545b67;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span #cart-coupon-add{
+  width: 40%;
+  background-color: #c31632;
+  color: white;
+  font-weight: 600;
+  border-radius: 1.7rem;
+  font-size: 0.8rem;
+  border: 1px solid #c31632;
+  transition: .5s;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span #cart-coupon-add:hover{
+  background-color: #8c1024;
+  border: 1px solid #8c1024;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .coupon-column.summary-coupon-wrap{
+  display: none;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .totalizers-list{
+  border: none;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot tr{
+  border-top: 1px solid #c31632 !important;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot .info{
+  font-size: 0.8rem;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot .info::after{
+  font-size: 0.8rem;
+  content: "(IVA incl)";
+  margin-left: 2px;
+  font-weight: 400;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot .monetary{
+  font-size: 1rem;
+  color: black;
+  font-weight: 600;
+}
+
+.payments-availables{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.payments-availables span i::before{
+  font-family: "Cortinadecor Icons";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #bdc2ca;
+}
+
+.payments-availables span:nth-child(1) i::before{
+  content:"\F1F0";
+}
+.payments-availables span:nth-child(2) i::before{
+  content:"\F1F1";
+}
+.payments-availables span:nth-child(3) i::before{
+  content:"\F1F4";
+}
+.payments-availables span:nth-child(4) i::before{
+  content:"\F1F4";
+}
+.payments-availables span:nth-child(5) i::before{
+  content:"\F19C";
+}
+.payments-availables span:nth-child(6) i::before{
+  content:"\E802";
+}
+
+.trust-seals{
+  font-size: 0.8rem;
+}
+
+.trust-seals h3{
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.trust-seals .trust-seals-warranty,
+.trust-seals .trust-seals-payment{
+  position: relative;
+  margin-top: 1.9rem;
+  margin-bottom: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.trust-seals .trust-seals-warranty .tabletVersion{
+  display: none;
+}
+
+.trust-seals .arrow-container{
+  position: absolute;
+  top: -0.95rem;
+}
+
+.trust-seals .arrow-animation{
+  stroke: #c31632;
+  stroke-dashoffset: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.trust-seals .icon-container{
+  display: inline-block;
+  width: auto;
+}
+
+.trust-seals .icon-container i::before{
+  font-family: "Cortinadecor Icons";
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+  line-height: 1rem;
+  font-size: 1.6rem;
+}
+
+.trust-seals .icon-container .icon-guarantee::before{
+  content: "\E843";
+}
+
+.trust-seals .icon-container .icon-lock::before{
+  content: "\E858";
+}
+
+.trust-seals .trustText{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.trust-seals .trust-seals-payment .trustText{
+  padding-left: 5rem;
+}
+
+.trust-seals .text-container{
+  display: inline-block;
+  width: auto;
+  padding-left: 1.9rem;
+  text-align: left;
+}
+
+.trust-seals .text-container .subtitle{
+  font-weight: 600;
+  color: #c31632;
+}
+
+
+.floatingButton{
+  width: 100%;
+  background-color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  transition: .4s;
+}
+
+.floatingButton .price{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  letter-spacing: .3px;
+}
+
+.floatingButton .price .priceContainer{
+  font-weight: 600;
+}
+
+
+.floatingButton .cart-links.cart-links-bottom{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+
+.floatingButton .cart-links.cart-links-bottom span{
+  display: block;
+  width: 100%;
+}
+
+.floatingButton .cart-links.cart-links-bottom span a{
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+}
+
 /*---------------------TABLET-------------------*/
 
 @media screen and (min-width: 768px) {
   header .logo{
     width: 25%;
   }
+
+  .trust-seals .trust-seals-warranty{
+    margin-bottom: 1rem
+  }
+
+  .trust-seals #trust-seals-arrows-warranty{
+    width: 100%;
+  }
+
+  .trust-seals .trust-seals-warranty .tabletVersion{
+    display: inline;
+  }
+
+  .trust-seals .trust-seals-warranty .mobileVersion{
+    display: none;
+  }
+
+
+  footer{
+    padding: 2rem 5% 0 5%;
+  }
+
+  footer .links .dating{
+    padding-top: 1rem;
+    border-top: 1px solid white;
+  }
+
+  footer .links .accordion{
+    padding-top: 2rem;
+    border-top: 1px solid white;
+  }
 }
 
 /*---------------------DESKTOP------------------*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1000px) {
   header .logo{
     width: 15%;
   }
