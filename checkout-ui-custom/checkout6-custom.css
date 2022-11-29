@@ -6,117 +6,8 @@
   font-display: swap
 }
 
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 100;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-ThinItalic.ttf.css");
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 100;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Thin.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 900;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Black.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 900;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-BlackItalic.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Bold.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 700;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-BoldItalic.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 200;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-ExtraLight.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 200;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-ExtraLightItalic.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 300;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Light.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 300;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-LightItalic.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Italic.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Medium.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-MediumItalic.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-Regular.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-style : normal;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-SemiBold.ttf.css");
-}
-
-@font-face {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-style : italic;
-  src        : url("https://cortinadecor.vteximg.com.br/arquivos/Montserrat-SemiBoldItalic.ttf.css");
-}
 *{
   box-sizing: border-box;
   margin: 0;
@@ -417,7 +308,6 @@ footer .social .icon{
 footer .social .icon::before{
   font-style: normal;
   font-weight: 400;
-  speak: never;
   display: inline-block;
   text-decoration: inherit;
   text-align: center;
