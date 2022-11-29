@@ -710,6 +710,13 @@ footer .copyright p a{
   color: #8c1024;
 }
 
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active .payment-group-item-text::before{
+  background: #c31632;
+  border-color: #c31632;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
 .orderform-template-holder .step .form-step fieldset p input.error,
 .vtex-omnishipping-1-x-address p input.error{
   border-bottom: 1px solid #c31632 !important;
@@ -738,9 +745,6 @@ footer .copyright p a{
 #btn-go-to-payment{
   margin: 0.5rem auto
 }
-
-.input.ship-postalCode,
-
 
 /*---------------------TABLET-------------------*/
 
