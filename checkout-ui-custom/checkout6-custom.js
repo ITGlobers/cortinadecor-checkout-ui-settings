@@ -38,16 +38,9 @@ let steps = {
 let interval = setInterval(function(){
   if(document.querySelector('.loading.loading-bg').style.display === "none"){
     fixPrice();
+    clearInterval(interval)
   }
 },500);
-
-let adjustPrice = () => {
-  let reference = document.querySelector('td.monetary[data-bind="text: totalLabel"]');
-  let priceContainer = document.querySelector('.floatingButton .price .priceContainer');
-
-  priceContainer.innerHTML = reference.innerHTML;
-}
-
 
 let couponsHandler = () => {
   let wrapper = document.createElement('details');
@@ -160,10 +153,9 @@ let summaryTitle = () => {
 }
 
 let fixPrice = () => {
-  console.log("fixprice")
   let monetaries = document.querySelectorAll('.monetary');
   let productPrices = document.querySelectorAll('.new-product-price');
-  let all = [...monetaries,...productPrices,document.querySelector('.floatingButton .priceContainer')]
+  let all = [...monetaries,...productPrices]
 
   for(let i = 0; i < all.length; i++){
     if(all[i].innerHTML.toLocaleLowerCase().includes('free')) all[i].classList.add('free');
@@ -175,7 +167,6 @@ $(window).on("orderFormUpdated.vtex", function(){
   console.log("actualice el checkout");
   setTimeout(function(){
     changeProductsheader();
-    adjustPrice();
     messageManufacturing();
     fixPrice();
   },500);

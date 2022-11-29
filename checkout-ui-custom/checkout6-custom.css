@@ -338,7 +338,8 @@ footer .copyright p a{
   justify-content: space-between;
 }
 
-.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon{
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon,
+.orderform-template .cart-template.mini-cart .summary-template-holder #cart-coupon{
   width: 50%;
   color: #545b67;
   border-radius: 1.7rem;
@@ -708,6 +709,7 @@ footer .copyright p a{
 #cart-coupon-add:hover{
   border: 1px solid #8c1024;
   color: #8c1024;
+  background-color: rgba(192,22,50,0.4);
 }
 
 
@@ -742,10 +744,50 @@ footer .copyright p a{
   margin-top: 10px;
 }
 
+.accordion-group .accordion-heading .accordion-toggle span.payment-edit-link::after{
+  display: none;
+}
+
 #btn-go-to-payment{
   margin: 0.5rem auto
 }
 
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap.active, .orderform-template-holder #payment-data .v-custom-payment-item-wrap:hover{
+  border-color: #c31632;
+}
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active{
+  border-bottom: #c31632;
+  background: rgba(192,22,50,0.5);
+}
+
+.icon-edit::before{
+  content: "\E863";
+  font-family: Cortinadecor Icons;
+  font-size: 1rem;
+  color: #8c1024;
+}
+
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-summaryChange{
+  border-color: #c31632;
+  background: rgba(192,22,50,0.2);
+  color: #8c1024;
+}
+
+.orderform-template .cart-template.mini-cart .summary-template-holder #cart-coupon{
+  width: 100%;
+}
+
+.cart-more-options .srp-container .onda-v1 .blue,
+#force-shipping-fields,
+.input.ship-postalCode a{
+  color: #c31632;
+}
+
+.srp-shipping-current-single__bullet.flex-none.mr3 .srp-icon-radio-selected path,
+svg.vtex-omnishipping-1-x-svg path{
+  fill: #c31632;
+}
 /*---------------------TABLET-------------------*/
 
 @media screen and (min-width: 768px) {
