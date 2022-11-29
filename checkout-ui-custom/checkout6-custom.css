@@ -17,9 +17,9 @@
 
 body{
   font-family: "Montserrat","Verdana", sans-serif;
-  letter-spacing: 1px;
-  background: white;
-  height: 100vh;
+  letter-spacing: 1px !important;;
+  background: white !important;
+  height: 100vh !important;;
   padding: 0;
 }
 
