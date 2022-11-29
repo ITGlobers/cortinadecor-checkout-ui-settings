@@ -12,6 +12,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", "verdana", sans-serif;
 }
 
 body{
@@ -19,6 +20,7 @@ body{
   letter-spacing: 1px;
   background: white;
   height: 100vh;
+  padding: 0;
 }
 
 body::before{
@@ -94,7 +96,7 @@ header .redirect a.active{
 }
 
 .buySteps ul li svg{
-  width: 2rem;
+  display: none;
 }
 
 .buySteps ul li:nth-child(1),
@@ -102,6 +104,37 @@ header .redirect a.active{
 .buySteps ul li:nth-child(5),
 .buySteps ul li:nth-child(7){
   margin-bottom: 7px;
+  border: 0;
+}
+
+.buySteps ul li:nth-child(2),
+.buySteps ul li:nth-child(4),
+.buySteps ul li:nth-child(6){
+  position: relative;
+  height: 1px;
+  width: 10%;
+  border-top: 1px solid #545b67;
+  color: #545b67;
+  margin-bottom: 0.5rem;
+}
+
+.buySteps ul li:nth-child(2)::after,
+.buySteps ul li:nth-child(4)::after,
+.buySteps ul li:nth-child(6)::after{
+  font-family: Cortinadecor Icons;
+  font-size: 12px;
+  content: "\E801";
+  position: absolute;
+  top: 50%;
+  left: calc(100% - 8px);
+  transform: translateY(-50%);
+}
+
+.buySteps ul li.current:nth-child(2),
+.buySteps ul li.current:nth-child(4),
+.buySteps ul li.current:nth-child(6){
+  color: #c31632;
+  border-top: 1px solid #c31632;
 }
 
 .buySteps ul li a{
@@ -112,218 +145,13 @@ header .redirect a.active{
   color: inherit;
 }
 
-.preFooter{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding: 1rem;
-  background-color: #f2f2f9;
-}
-
-.preFooter a{
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 5px;
-  color: black;
-  text-decoration: underline;
-}
-
-.preFooter a:hover{
-  color: black;
-}
-
-.preFooter a span{
-  display: flex;
-  gap: 5px;
-  line-height: 1.2rem;
-}
-
-.preFooter a span::before{
-  content: "\E822";
-  font-family: "Cortinadecor Icons";
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-
 footer{
   background-color: #c31632;
   padding: 0 1.2rem;
   color: white;
-  position: relative;
+  position: fixed;
   bottom: 0;
-}
-
-footer .links{
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-}
-
-footer .links .dating{
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 0.7rem;
-}
-
-footer .links .dating .footer-phone{
-  color: inherit;
-  text-decoration: underline;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  display: flex;
-  align-items: center;
-}
-
-footer .links .dating .footer-phone i::before{
-  content: "\E86E";
-  font-size: 2rem;
-  font-family: "Cortinadecor Icons";
-  text-decoration: none;
-}
-
-footer .links .dating .calendarDates{
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-footer .links .dating .calendarDates .days{
-  font-size: 14px;
-  font-weight: 600;
-}
-
-footer .links .dating .calendarDates .hours{
-  font-size: 14px;
-}
-
-footer .links .dating .DatingCTA{
-  display: block;
-  width: 100%;
-  color: #c31632;
-  border: 1px solid #c31632;
-  border-radius: 40px;
-  background-color: white;
-  margin: 15px 0;
-  padding: 14px 0;
-  font-size: 1rem;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
-  transition: .4s;
-}
-
-footer .links .dating .DatingCTA:hover{
-  color: white;
-  border: 1px solid white;
-  background-color: #c31632;
-}
-
-footer .links .accordion{
-  width: 100%;
-  height: auto;
-  color: white;
-  margin: 1rem 0;
-  padding: 10px 0;
-}
-
-footer .links .accordion .dialogTitle{
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-  text-transform: uppercase;
-  text-decoration: none;
-  list-style: none;
-  cursor: pointer;
-}
-
-footer .links .accordion .dialogTitle span{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-footer .links .accordion .dialogTitle span::after{
-  content: "\E8A2";
-  font-size: 0.8rem;
-  font-family: "Cortinadecor Icons";
-  font-weight: 400;
-  line-height: 0.8rem;
-  transform: rotate(45deg);
-  transition: all .5s;
-}
-
-footer .links .accordion[open] .dialogTitle span::after{
-  transform: rotate(0deg);
-}
-
-footer .links .accordion .dialogContent{
-  width: 100%;
-  padding-top: 1.5rem;
-}
-
-footer .links .accordion .dialogContent ul{
-  list-style: none;
-  margin: 0;
-}
-
-footer .links .accordion .dialogContent ul li{
-  padding: 0.5rem 0;
-}
-
-footer .links .accordion .dialogContent ul li a{
-  text-decoration: none;
-  color: inherit;
-  font-size: 0.8rem;
-  letter-spacing: .3px;
-}
-
-footer .links .accordion .dialogContent ul li a:hover{
-  font-weight: 600;
-}
-
-
-footer .social{
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  padding: 1.5rem 0;
-}
-
-footer .social .icon{
-  color: white;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  font-size: 2rem;
-}
-
-footer .social .icon::before{
-  font-style: normal;
-  font-weight: 400;
-  display: inline-block;
-  text-decoration: inherit;
-  text-align: center;
-  font-variant: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  line-height: 1em;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
-  -webkit-font-feature-settings: "liga";
-  font-feature-settings: "liga";
-  vertical-align: middle;
 }
 
 footer .copyright{
@@ -357,6 +185,8 @@ footer .copyright p a{
   font-weight: 600;
   letter-spacing: .3px;
   border-radius: 40px;
+  position: relative;
+  left: -10px;
 }
 
 .cart-template-holder{
@@ -416,6 +246,7 @@ footer .copyright p a{
   font-size: 0.7rem;
   text-decoration: none;
   width: 30%;
+  text-align: right;
 }
 
 .full-cart .cart table.table.cart-items thead .send-cart-link i::before{
@@ -564,10 +395,29 @@ footer .copyright p a{
   font-weight: 400;
 }
 
-.totalizers.summary-totalizers.cart-totalizers tfoot .monetary{
+.totalizers.summary-totalizers.cart-totalizers tfoot .monetary,
+.orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td.monetary{
   font-size: 1rem;
   color: black;
   font-weight: 600;
+}
+
+.orderform-template .cart-template.mini-cart .summary-totalizers tbody{
+  border: none;
+}
+
+.monetary::after,
+.new-product-price::after{
+  font-size: 0.8rem;
+  color: inherit;
+  font-weight: 600;
+  content: "\E830";
+  font-family: "Cortinadecor Icons";
+}
+
+.monetary.free::after,
+.new-product-price.free::after{
+  content: "";
 }
 
 .payments-availables{
@@ -691,54 +541,6 @@ footer .copyright p a{
   color: #c31632;
 }
 
-
-.floatingButton{
-  width: 100%;
-  background-color: white;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  opacity: 0;
-  transition: .4s;
-}
-
-.floatingButton .price{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1rem;
-  letter-spacing: .3px;
-}
-
-.floatingButton .price .priceContainer{
-  font-weight: 600;
-}
-
-
-.floatingButton .cart-links.cart-links-bottom{
-  width: 100%;
-  margin: 0;
-  text-align: center;
-  display: flex;
-  align-items: center;
-}
-
-.floatingButton .cart-links.cart-links-bottom span{
-  display: block;
-  width: 100%;
-}
-
-.floatingButton .cart-links.cart-links-bottom span a{
-  display: block;
-  width: 100%;
-  padding: 0.5rem;
-}
-
 .manufacturingContainer{
   display: flex;
   flex-direction: column;
@@ -754,6 +556,7 @@ footer .copyright p a{
   align-items: center;
   justify-content: flex-start;
   gap: 1rem;
+  width: 100%;
 }
 
 .manufacturingContainer .description::before{
@@ -827,12 +630,129 @@ footer .copyright p a{
   font-family: "Cortinadecor Icons";
 }
 
+.cart-more-options{
+  background-color: transparent;
+}
+
+#shipping-calculate-link{
+  color: #8c1024;
+}
+
+#orderform-minicart-to-cart{
+  display: none;
+}
+
+.orderform-template .cart-template.mini-cart .quantity{
+  display: none;
+}
+
+.orderform-template .cart-template.mini-cart .summary-template-holder .summary > .summary-coupon-wrap{
+  border: none;
+}
+
+.submit.btn-submit-wrapper{
+  font-weight: 600;
+}
+
+.btn-success{
+  font-weight: 600;
+}
+
+.orderform-template-holder .step .form-step fieldset p{
+  width: 100% !important;
+  margin-bottom: 15px;
+}
+
+.orderform-template-holder .step .form-step fieldset p label,
+.input.ship-postalCode label,
+.vtex-omnishipping-1-x-address p label{
+  font-size: 12px;
+  font-family: "Montserrat", "verdana", sans-serif;
+  transition: .5s;
+}
+
+.orderform-template-holder .step .form-step fieldset p label::after,
+.input.ship-postalCode label::after,
+.vtex-omnishipping-1-x-address p label::after{
+  content: "*";
+}
+
+.orderform-template-holder .step .form-step fieldset p input,
+.input.ship-postalCode input,
+.vtex-omnishipping-1-x-address p input{
+  border: none !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 12px;
+  font-family: "Montserrat", "verdana", sans-serif;
+}
+
+.orderform-template .cart-template.mini-cart .item .price{
+  display: none;
+}
+
+.orderform-template-holder .step .form-step fieldset p input::placeholder{
+  opacity: 0;
+}
+
+.orderform-template-holder .step .form-step fieldset p span.help.error{
+  width: 100%;
+}
+
+#cart-coupon-add{
+  border: 1px solid #c31632;
+  color: #c31632;
+}
+
+#cart-coupon-add:hover{
+  border: 1px solid #8c1024;
+  color: #8c1024;
+}
+
+.orderform-template-holder .step .form-step fieldset p input.error,
+.vtex-omnishipping-1-x-address p input.error{
+  border-bottom: 1px solid #c31632 !important;
+}
+
+.client-profile-data ul.links.unstyled a{
+  color: black !important;
+  font-family: "Montserrat", "verdana", sans-serif;
+  font-weight: 600;
+}
+
+.accordion-group .accordion-heading .accordion-toggle span::before,
+.accordion-group.shipping-data .accordion-heading .accordion-toggle::before{
+  display: none !important;
+}
+
+.accordion-group .accordion-heading .accordion-toggle span::after,
+#shipping-data .accordion-group .accordion-heading .accordion-toggle::after{
+  content: "";
+  display: block;
+  width: 40px;
+  border-bottom: 3px solid #c31632;
+  margin-top: 10px;
+}
+
+#btn-go-to-payment{
+  margin: 0.5rem auto
+}
+
+.input.ship-postalCode,
+
 
 /*---------------------TABLET-------------------*/
 
 @media screen and (min-width: 768px) {
   header .logo{
     width: 25%;
+  }
+
+  .buySteps ul li:nth-child(2),
+  .buySteps ul li:nth-child(4),
+  .buySteps ul li:nth-child(6){
+    width: 15%;
   }
 
   .container.container-main.container-cart{
@@ -871,7 +791,6 @@ footer .copyright p a{
     display: none;
   }
 
-
   footer{
     padding: 2rem 5% 0 5%;
   }
@@ -889,6 +808,15 @@ footer .copyright p a{
 
 /*---------------------DESKTOP------------------*/
 @media screen and (min-width: 1000px) {
+
+  .manufacturingContainer .description{
+    width: 50%;
+  }
+
+  .manufacturingContainer .conditions,
+  .manufacturingContainer .price{
+    width: 25%;
+  }
 
   .buySteps ul{
     width: 80%;
@@ -941,6 +869,10 @@ footer .copyright p a{
 
   .table.cart-items tbody tr{
     border: none;
+  }
+
+  .table.cart-items tbody tr td.item-remove{
+    margin: 0;
   }
 
   .table.cart-items tbody tr td.product-image{

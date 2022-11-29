@@ -35,38 +35,9 @@ let steps = {
   }
 }
 
-//-----------Observer Config to floatign button----------//
-let setIntersectionObrserver = () => {
-  let target = document.querySelector('.cart-links.cart-links-bottom');
-  let floatingPrice = document.querySelector('.floatingButton')
-
-  let options = {
-    root: null,
-    rootMargin: `-${100}px`,
-    threshold: [0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]
-  }
-
-  const showPrice = (entries, observer) => {
-    if(entries[0].intersectionRatio > 0 && entries[0].intersectionRatio <= 0.25){
-      floatingPrice.style.opacity = "1";
-    }
-    if(entries[0].intersectionRatio > 0.25 && entries[0].intersectionRatio <= 1){
-      floatingPrice.style.opacity = "0";
-    }
-  }
-  console.log(target)
-  let intersection = new IntersectionObserver(showPrice, options);
-
-  intersection.observe(target);
-}
-
 let interval = setInterval(function(){
   if(document.querySelector('.loading.loading-bg').style.display === "none"){
-    clearInterval(interval);
-    if(innerWidth < 1000){
-      setIntersectionObrserver();
-      document.querySelector('footer').style.paddingBottom = document.querySelector('.floatingButton').clientHeight+32+"px";
-    }
+    fixPrice();
   }
 },500);
 
@@ -77,9 +48,6 @@ let adjustPrice = () => {
   priceContainer.innerHTML = reference.innerHTML;
 }
 
-
-
-//-----------END----------//
 
 let couponsHandler = () => {
   let wrapper = document.createElement('details');
@@ -191,12 +159,25 @@ let summaryTitle = () => {
   reference.insertBefore(toInsert, reference.querySelector('div.summary-totalizers'));
 }
 
+let fixPrice = () => {
+  console.log("fixprice")
+  let monetaries = document.querySelectorAll('.monetary');
+  let productPrices = document.querySelectorAll('.new-product-price');
+  let all = [...monetaries,...productPrices,document.querySelector('.floatingButton .priceContainer')]
+
+  for(let i = 0; i < all.length; i++){
+    if(all[i].innerHTML.toLocaleLowerCase().includes('free')) all[i].classList.add('free');
+    all[i].innerHTML = all[i].innerHTML.replace('$ ','');
+  }
+}
+
 $(window).on("orderFormUpdated.vtex", function(){
   console.log("actualice el checkout");
   setTimeout(function(){
     changeProductsheader();
     adjustPrice();
     messageManufacturing();
+    fixPrice();
   },500);
 })
 
