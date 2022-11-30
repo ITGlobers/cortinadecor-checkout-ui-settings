@@ -138,6 +138,30 @@ let messageManufacturing = () => {
   }
 }
 
+let navButtons = () => function(){
+  if(document.querySelectorAll('.table.cart-items .product-item').length === 0 || isFirstTime){
+    let reference = document.querySelector('.cart-template .cart');
+    let container = document.createElement('div');
+    container.classList.add('cartButtons');
+    let toInsert = '';
+      toInsert += ' <div class="goBack">';
+      toInsert += '   <a href="/" class="goBack-link"><i class="icon icon-angle-left bold"></i>Return</a>'
+      toInsert += ' </div>';
+      toInsert += ' <div class="goForward">';
+      toInsert += '   <a href="#/orderform" target="_self" data-event="cartToOrderform" id="cart-to-orderform" class="btn btn-large btn-success pull-left-margin btn-place-order" data-i18n="cart.finalize" data-bind="click: cart.next">NEXT</a>';
+      toInsert += ' </div>';
+      container.innerHTML = toInsert;
+    reference.after(container);
+  }else{
+    let reference = document.querySelector('#cartLoadedDiv');
+    let element = document.querySelector('.cartButtons');
+    let products = document.querySelectorAll('.table.cart-items .product-item').length
+    if(element !== null && products === 0){
+      reference.removeChild(element);
+    }
+  }
+}
+
 let summaryTitle = () => {
   let reference = document.querySelector('div.summary');
   let toInsert = document.createElement('h3');
@@ -151,6 +175,7 @@ $(window).on("orderFormUpdated.vtex", function(){
   setTimeout(function(){
     changeProductsheader();
     messageManufacturing();
+    navButtons();
   },500);
 })
 
@@ -162,6 +187,7 @@ setTimeout(function(){
   if(innerWidth > 1000){
     summaryTitle();
   }
+  setTimeout(navButtons(),500);
 },500)
 
 
