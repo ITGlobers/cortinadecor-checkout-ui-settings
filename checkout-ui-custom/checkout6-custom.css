@@ -210,8 +210,9 @@ footer .copyright p a{
   letter-spacing: .3px;
   border-radius: 30px;
   position: relative;
-  left: -10px;
-  font-family: Montserrat !important;
+  top: 4px;
+  margin: auto;
+  font-family: Montserrat, Verdana, sans-serif !important;
 }
 
 .cart-template-holder{
@@ -220,6 +221,11 @@ footer .copyright p a{
 
 .cart-template-holder .cart{
   background: #f2f2f2;
+  border-radius: 0;
+}
+
+.full-cart .cart table.table.cart-items{
+  border-bottom: 1px solid #c31632;
 }
 
 .full-cart .cart table.table.cart-items thead{
@@ -229,7 +235,6 @@ footer .copyright p a{
 
 .full-cart .cart table.table.cart-items tbody{
   border-top: 1px solid #c31632;
-  border-bottom: 1px solid #c31632;
 }
 
 .full-cart .cart table.table.cart-items thead div{
@@ -428,9 +433,9 @@ footer .copyright p a{
 
 .totalizers.summary-totalizers.cart-totalizers tfoot .monetary,
 .orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td.monetary{
-  font-size: 16px;
-  color: black;
-  font-weight: 600;
+  font-size: 16px !important;
+  color: black !important;
+  font-weight: 600 !important;
 }
 
 .orderform-template-holder#payment-data.payment-group-item.active{
@@ -571,10 +576,12 @@ footer .copyright p a{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   color: black;
   text-decoration: none;
-  background-color: #f2f2f2;
+  background-color: #F2F2F9;
+  padding: 15px 0;
+  margin: 1rem 0;
 }
 
 .manufacturingContainer .description{
@@ -589,14 +596,16 @@ footer .copyright p a{
   content: "\E88C";
   font-family: "Cortinadecor Icons";
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 25px;
+  padding: 0 10px 0 20px;
 }
 
 .manufacturingContainer .description .description-title{
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
   text-align: left;
   text-transform: uppercase;
+  margin: 5px 0;
 }
 
 .manufacturingContainer .description .description-content{
@@ -604,7 +613,7 @@ footer .copyright p a{
 }
 
 .manufacturingContainer .description .description-content .servicePrice{
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -616,10 +625,15 @@ footer .copyright p a{
   text-decoration: underline;
 }
 
-.manufacturingContainer .conditions,
+.manufacturingContainer .conditions{
+  width: 100%;
+  text-align: center;
+}
+
 .manufacturingContainer .price{
   width: 100%;
   text-align: center;
+  padding: 0 15px;
 }
 
 .manufacturingContainer .conditions a{
@@ -803,6 +817,16 @@ footer .copyright p a{
 svg.vtex-omnishipping-1-x-svg path{
   fill: #c31632;
 }
+
+#go-to-shipping{
+  font-size: 16px !important;
+}
+
+#payment-data-submit{
+  font-family: Verdana, sans-serif !important;
+  text-transform: uppercase;
+  font-size: 16px !important;
+}
 /*---------------------TABLET-------------------*/
 
 @media screen and (min-width: 768px) {
@@ -867,12 +891,16 @@ svg.vtex-omnishipping-1-x-svg path{
 @media screen and (min-width: 1000px) {
 
   .manufacturingContainer .description{
-    width: 50%;
+    width: 65%;
   }
 
-  .manufacturingContainer .conditions,
-  .manufacturingContainer .price{
+  .manufacturingContainer .conditions{
     width: 25%;
+  }
+
+  .manufacturingContainer .price{
+    width: 10%;
+    text-align: left;
   }
 
   .buySteps ul{
@@ -942,10 +970,9 @@ svg.vtex-omnishipping-1-x-svg path{
   }
 
   .manufacturingContainer{
-    padding: 1rem;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
   }
 
   footer section{

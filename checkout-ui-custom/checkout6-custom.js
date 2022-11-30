@@ -98,10 +98,11 @@ let moveTrustValues = () => {
   reference.append(seals);
   seals.style.display = "block";
 }
+
 let isFirstTime = true;
 let messageManufacturing = () => {
   if(document.querySelectorAll('.table.cart-items .product-item').length === 0 || isFirstTime){
-    let reference = document.querySelector('.cart-template .cart');
+    let reference = document.querySelector('.cart-template .cart .table.cart-items');
     let container = document.createElement('div');
     container.classList.add('manufacturingContainer');
     let toInsert = '';
@@ -121,7 +122,7 @@ let messageManufacturing = () => {
     toInsert += ' </div>';
     toInsert += ' <div class="price">';
     toInsert += '   <p>';
-    toInsert += '     $9.95';
+    toInsert += '     $ 9.95';
     toInsert += '   </p>';
     toInsert += ' </div>';
     container.innerHTML = toInsert;
