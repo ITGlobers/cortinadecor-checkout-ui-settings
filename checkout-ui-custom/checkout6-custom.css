@@ -28,6 +28,10 @@ body{
   letter-spacing: .3px;
 }
 
+.srp-address-title{
+  color: #c31632 !important;
+}
+
 body::before{
   display: none;
 }
@@ -844,10 +848,17 @@ footer .copyright p a{
   color: #8c1024;
 }
 
-.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-summaryChange{
-  border-color: #c31632;
-  background: rgba(192,22,50,0.2);
-  color: #8c1024;
+.vtex-omnishipping-1-x-summaryChange{
+  border-color: #c31632 !important;
+  background: rgba(192,22,50,0.2) !important;
+  color: #8c1024 !important;
+}
+
+.orderform-template-holder #payment-data .payment-group-item.active,
+.orderform-template-holder #payment-data .payment-group-item:hover,
+.orderform-template-holder #payment-data p.link.link-gift-card:hover,
+.orderform-template-holder #payment-data p.link.link-gift-card.active{
+  border: 1px solid #c31632 !important;
 }
 
 .orderform-template .cart-template.mini-cart .summary-template-holder #cart-coupon{
