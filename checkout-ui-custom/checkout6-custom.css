@@ -966,7 +966,7 @@ svg.vtex-omnishipping-1-x-svg path{
   }
 
   .table.cart-items td.product-image a, .table.cart-items td.product-image img{
-    width: 100%;
+    width: 45px !important;
   }
 
   .manufacturingContainer{
