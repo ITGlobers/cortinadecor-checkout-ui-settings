@@ -17,10 +17,12 @@
 
 body{
   font-family: "Montserrat","Verdana", sans-serif;
-  letter-spacing: 1px !important;;
+  letter-spacing: .3px !important;
   background: white !important;
   height: 100vh !important;;
   padding: 0;
+  line-height: 1.42857143;
+  letter-spacing: .3px;
 }
 
 body::before{
@@ -181,7 +183,7 @@ footer .copyright p a{
 
 #cart-to-orderform::after{
   content: "NEXT";
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   letter-spacing: .3px;
   border-radius: 40px;
@@ -203,7 +205,7 @@ footer .copyright p a{
 }
 
 .full-cart .cart table.table.cart-items tbody{
-  border-top: 2px solid #c31632;
+  border-top: 1px solid #c31632;
   border-bottom: 1px solid #c31632;
 }
 
@@ -226,16 +228,16 @@ footer .copyright p a{
   border-right: 2px solid black;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   margin: 0;
   padding-right: 0.2rem;
-  line-height: 1rem;
+  line-height: 1.1;
 }
 
 .full-cart .cart table.table.cart-items thead div.textContainer p{
   font-weight: 400;
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -243,7 +245,7 @@ footer .copyright p a{
   display: block;
   color: black;
   font-weight: 600;
-  font-size: 0.7rem;
+  font-size: 12px;
   text-decoration: none;
   width: 30%;
   text-align: right;
@@ -251,26 +253,28 @@ footer .copyright p a{
 
 .full-cart .cart table.table.cart-items thead .send-cart-link i::before{
   content: "\E85C";
-  font-size: 0.9rem;
+  font-size: 12px;
   font-weight: 400;
   font-family: "Cortinadecor Icons";
 }
 
 .table.cart-items i.icon.icon-remove.item-remove-ico::before{
-  content: "\E88E";
+  content: "\E88E" !important;
   font-family: "Cortinadecor Icons";
-  font-size: 1.5rem;
+  font-size: 25px;
   color: black;
 }
 
 .table.cart-items td.quantity{
-  border: none;
+  border: none !important;
 }
 
 .table.cart-items td.quantity [id*="item-quantity-"]{
   border: 1px solid #545b67;
   height: 32px !important;
   width: 25px !important;
+  font-family: Montserrat;
+  font-size: 12px;
   border-radius: 0px;
 }
 
@@ -309,17 +313,17 @@ footer .copyright p a{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 12px;
   font-weight: 600;
 }
 
 .totalizers.summary-totalizers.cart-totalizers .couponsWrapper .couponsTitle::after{
   content: "\E8A2";
   color: black;
-  font-size: 0.8rem;
+  font-size: 20px;
   font-family: "Cortinadecor Icons";
   font-weight: 400;
-  line-height: 0.8rem;
+  line-height: 1.42857143;
   transform: rotate(45deg);
   transition: all .5s;
 }
@@ -363,7 +367,7 @@ footer .copyright p a{
   color: white;
   font-weight: 600;
   border-radius: 1.7rem;
-  font-size: 0.8rem;
+  font-size: 12px;
   border: 1px solid #c31632;
   transition: .5s;
 }
@@ -386,11 +390,11 @@ footer .copyright p a{
 }
 
 .totalizers.summary-totalizers.cart-totalizers tfoot .info{
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
 .totalizers.summary-totalizers.cart-totalizers tfoot .info::after{
-  font-size: 0.8rem;
+  font-size: 12px;
   content: "(IVA incl)";
   margin-left: 2px;
   font-weight: 400;
@@ -398,22 +402,13 @@ footer .copyright p a{
 
 .totalizers.summary-totalizers.cart-totalizers tfoot .monetary,
 .orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td.monetary{
-  font-size: 1rem;
+  font-size: 16px;
   color: black;
   font-weight: 600;
 }
 
 .orderform-template .cart-template.mini-cart .summary-totalizers tbody{
   border: none;
-}
-
-.monetary::after,
-.new-product-price::after{
-  font-size: 0.8rem;
-  color: inherit;
-  font-weight: 600;
-  content: "\E830";
-  font-family: "Cortinadecor Icons";
 }
 
 .monetary.free::after,
@@ -431,7 +426,7 @@ footer .copyright p a{
 
 .payments-availables span i::before{
   font-family: "Cortinadecor Icons";
-  font-size: 1.5rem;
+  font-size: 25px;
   font-weight: 400;
   color: #bdc2ca;
 }
@@ -456,12 +451,12 @@ footer .copyright p a{
 }
 
 .trust-seals{
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
 .trust-seals h3{
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 16px;
   margin-bottom: 1rem;
   text-transform: uppercase;
   text-align: left;
@@ -508,8 +503,8 @@ footer .copyright p a{
   font-weight: 400;
   display: inline-block;
   text-align: center;
-  line-height: 1rem;
-  font-size: 1.6rem;
+  line-height: 1.42857143;
+  font-size: 25px;
 }
 
 .trust-seals .icon-container .icon-guarantee::before{
@@ -568,30 +563,23 @@ footer .copyright p a{
 }
 
 .manufacturingContainer .description .description-title{
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 600;
   text-align: left;
   text-transform: uppercase;
 }
 
 .manufacturingContainer .description .description-content{
-  font-size: 0.7rem;
+  font-size: 12px;
 }
 
 .manufacturingContainer .description .description-content .servicePrice{
-  font-size: 0.9rem;
+  font-size: 16px;
   font-weight: 600;
-}
-
-.manufacturingContainer .description .description-content .servicePrice::after{
-  content: "\E830";
-  font-size: 0.9rem;
-  font-weight: 600;
-  font-family: "Cortinadecor Icons";
 }
 
 .manufacturingContainer .description .description-content a{
-  font-size: 0.7rem;
+  font-size: 12px;
   color: black;
   text-decoration: none;
   font-weight: 600;
@@ -599,7 +587,7 @@ footer .copyright p a{
 }
 
 .manufacturingContainer .description .description-content a:hover{
-  font-size: 0.8rem;
+  font-size: 14px;
 }
 
 .manufacturingContainer .conditions,
@@ -616,19 +604,12 @@ footer .copyright p a{
 }
 
 .manufacturingContainer .conditions a:hover{
-  font-size: 0.8rem;
+  font-size: 12px;
 }
 
 .manufacturingContainer .price p{
-  font-size: 0.9rem;
+  font-size: 12px;
   font-weight: 600;
-}
-
-.manufacturingContainer .price p::after{
-  content: "\E830";
-  font-size: 0.9rem;
-  font-weight: 600;
-  font-family: "Cortinadecor Icons";
 }
 
 .cart-more-options{
@@ -657,6 +638,14 @@ footer .copyright p a{
 
 .btn-success{
   font-weight: 600;
+}
+
+.table.cart-items td.quantity .item-quantity-change i:before{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: inherit;
 }
 
 .orderform-template-holder .step .form-step fieldset p{
@@ -764,7 +753,7 @@ footer .copyright p a{
 .icon-edit::before{
   content: "\E863";
   font-family: Cortinadecor Icons;
-  font-size: 1rem;
+  font-size: 16px;
   color: #8c1024;
 }
 
@@ -807,7 +796,7 @@ svg.vtex-omnishipping-1-x-svg path{
   }
 
   .summary .summaryTitle{
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     margin: 0.7rem 0 2rem 0;
@@ -817,7 +806,7 @@ svg.vtex-omnishipping-1-x-svg path{
     content: "";
     display: block;
     width: 40px;
-    border-bottom: 3px solid #c31632;
+    border-bottom: 1px solid #c31632;
     margin-top: 10px;
   }
 
@@ -918,7 +907,7 @@ svg.vtex-omnishipping-1-x-svg path{
   }
 
   .table.cart-items tbody tr td.item-remove{
-    margin: 0;
+    margin: auto !important
   }
 
   .table.cart-items tbody tr td.product-image{
