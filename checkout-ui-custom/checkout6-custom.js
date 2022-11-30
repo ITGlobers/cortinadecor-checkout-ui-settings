@@ -35,13 +35,6 @@ let steps = {
   }
 }
 
-let interval = setInterval(function(){
-  if(document.querySelector('.loading.loading-bg').style.display === "none"){
-    fixPrice();
-    clearInterval(interval)
-  }
-},500);
-
 let couponsHandler = () => {
   let wrapper = document.createElement('details');
   let title = document.createElement('summary');
@@ -117,7 +110,7 @@ let messageManufacturing = () => {
     toInsert += '     <h3 class="description-title">24H Manufacturing</h3>';
     toInsert += '     <p class="description-content">';
     toInsert += '       Activate manufacturing in 24 hours and get priority on your order';
-    toInsert += '       <b>just for</b> <span class="servicePrice">9.95</span> you can activate <b>manufacturing in 24h</b> for all compatible products <a href="/terms-of-use">Terms and conditions of service</a>';
+    toInsert += '       <b>just for</b> <span class="servicePrice">$ 9.95</span> you can activate <b>manufacturing in 24h</b> for all compatible products <a href="/terms-of-use">Terms and conditions of service</a>';
     toInsert += '     </p>';
     toInsert += '   </div>'
     toInsert += ' </div>';
@@ -128,7 +121,7 @@ let messageManufacturing = () => {
     toInsert += ' </div>';
     toInsert += ' <div class="price">';
     toInsert += '   <p>';
-    toInsert += '     9.95';
+    toInsert += '     $9.95';
     toInsert += '   </p>';
     toInsert += ' </div>';
     container.innerHTML = toInsert;
@@ -152,23 +145,11 @@ let summaryTitle = () => {
   reference.insertBefore(toInsert, reference.querySelector('div.summary-totalizers'));
 }
 
-let fixPrice = () => {
-  let monetaries = document.querySelectorAll('.monetary');
-  let productPrices = document.querySelectorAll('.new-product-price');
-  let all = [...monetaries,...productPrices]
-
-  for(let i = 0; i < all.length; i++){
-    if(all[i].innerHTML.toLocaleLowerCase().includes('free')) all[i].classList.add('free');
-    all[i].innerHTML = all[i].innerHTML.replace('$ ','');
-  }
-}
-
 $(window).on("orderFormUpdated.vtex", function(){
   console.log("actualice el checkout");
   setTimeout(function(){
     changeProductsheader();
     messageManufacturing();
-    fixPrice();
   },500);
 })
 

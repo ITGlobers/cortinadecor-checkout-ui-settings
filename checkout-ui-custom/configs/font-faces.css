@@ -1,6 +1,6 @@
 @font-face {
   font-family : Cortinadecor Icons;
-  src         : url(assets/fonts/cortinadecor-icons.woff) format("woff");
+  src         : url(/assets/fonts/cortinadecor-icons.woff) format("woff");
   font-weight : 400;
   font-style  : normal;
   font-display: swap
@@ -10,112 +10,112 @@
   font-family: Montserrat;
   font-weight: 100;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-ThinItalic.ttf);
+  src        : url(/assets/fonts/Montserrat-ThinItalic.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 100;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-Thin.ttf);
+  src        : url(/assets/fonts/Montserrat-Thin.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 900;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-Black.ttf);
+  src        : url(/assets/fonts/Montserrat-Black.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 900;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-BlackItalic.ttf);
+  src        : url(/assets/fonts/Montserrat-BlackItalic.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 700;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-Bold.ttf);
+  src        : url(/assets/fonts/Montserrat-Bold.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 700;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-BoldItalic.ttf);
+  src        : url(/assets/fonts/Montserrat-BoldItalic.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 200;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-ExtraLight.ttf);
+  src        : url(/assets/fonts/Montserrat-ExtraLight.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 200;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-ExtraLightItalic.ttf);
+  src        : url(/assets/fonts/Montserrat-ExtraLightItalic.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 300;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-Light.ttf);
+  src        : url(/assets/fonts/Montserrat-Light.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 300;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-LightItalic.ttf);
+  src        : url(/assets/fonts/Montserrat-LightItalic.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 400;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-Italic.ttf);
+  src        : url(/assets/fonts/Montserrat-Italic.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 500;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-Medium.ttf);
+  src        : url(/assets/fonts/Montserrat-Medium.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 500;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-MediumItalic.ttf);
+  src        : url(/assets/fonts/Montserrat-MediumItalic.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 400;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-Regular.ttf);
+  src        : url(/assets/fonts/Montserrat-Regular.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 600;
   font-style : normal;
-  src        : url(assets/fonts/Montserrat-SemiBold.ttf);
+  src        : url(/assets/fonts/Montserrat-SemiBold.ttf);
 }
 
 @font-face {
   font-family: Montserrat;
   font-weight: 600;
   font-style : italic;
-  src        : url(assets/fonts/Montserrat-SemiBoldItalic.ttf);
+  src        : url(/assets/fonts/Montserrat-SemiBoldItalic.ttf);
 }
 
 @font-face {

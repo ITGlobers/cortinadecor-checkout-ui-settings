@@ -5,14 +5,17 @@
   font-style  : normal;
   font-display: swap
 }
+@import url(./config/font-faces);
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Montserrat", "verdana", sans-serif;
+  line-height: 1.42857143;
+  letter-spacing: .3px;
 }
 
 body{
@@ -40,8 +43,10 @@ header{
   z-index: 3;
 }
 
-header .logo{
-  width: 50%;
+header .logo a img{
+  width: inherit;
+  height: inherit;
+  max-height: 35px;
 }
 
 header .redirect ul{
@@ -50,6 +55,20 @@ header .redirect ul{
   align-items: center;
   justify-content: center;
   margin: 0;
+}
+
+header .redirect ul li.user{
+  font-size: 25px;
+  font-weight: 400;
+  font-family: Cortinadecor Icons;
+  margin-right: 10px;
+}
+
+header .redirect ul li.user a i::before{
+  content: "\E896";
+  font-size: 25px;
+  font-weight: 400;
+  font-family: Cortinadecor Icons;
 }
 
 header .redirect a{
@@ -93,9 +112,6 @@ header .redirect a.active{
   margin: 0;
 }
 
-.buySteps ul li.current{
-  color: #c31632;
-}
 
 .buySteps ul li svg{
   display: none;
@@ -107,6 +123,11 @@ header .redirect a.active{
 .buySteps ul li:nth-child(7){
   margin-bottom: 7px;
   border: 0;
+  color: #e7e9ec;
+}
+
+.buySteps ul li.current{
+  color: #c31632;
 }
 
 .buySteps ul li:nth-child(2),
@@ -115,8 +136,8 @@ header .redirect a.active{
   position: relative;
   height: 1px;
   width: 10%;
-  border-top: 1px solid #545b67;
-  color: #545b67;
+  border-top: 1px solid #e7e9ec;
+  color: #e7e9ec;
   margin-bottom: 0.5rem;
 }
 
@@ -178,7 +199,8 @@ footer .copyright p a{
 
 #cart-to-orderform{
   font-size: 0;
-  border-radius: 40px;
+  border-radius: 30px;
+  padding: 10px !important;
 }
 
 #cart-to-orderform::after{
@@ -186,9 +208,10 @@ footer .copyright p a{
   font-size: 16px;
   font-weight: 600;
   letter-spacing: .3px;
-  border-radius: 40px;
+  border-radius: 30px;
   position: relative;
   left: -10px;
+  font-family: Montserrat !important;
 }
 
 .cart-template-holder{
@@ -354,6 +377,9 @@ footer .copyright p a{
 .totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon::placeholder{
   color: #545b67;
   opacity: 1;
+  font-size: 12px;
+  line-height: 1.42857143;
+  letter-spacing: .3px;;
 }
 
 .totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon:active,
@@ -405,6 +431,10 @@ footer .copyright p a{
   font-size: 16px;
   color: black;
   font-weight: 600;
+}
+
+.orderform-template-holder#payment-data.payment-group-item.active{
+  border-color: #c31632 !important;
 }
 
 .orderform-template .cart-template.mini-cart .summary-totalizers tbody{
@@ -584,10 +614,6 @@ footer .copyright p a{
   text-decoration: none;
   font-weight: 600;
   text-decoration: underline;
-}
-
-.manufacturingContainer .description .description-content a:hover{
-  font-size: 14px;
 }
 
 .manufacturingContainer .conditions,
@@ -780,9 +806,6 @@ svg.vtex-omnishipping-1-x-svg path{
 /*---------------------TABLET-------------------*/
 
 @media screen and (min-width: 768px) {
-  header .logo{
-    width: 25%;
-  }
 
   .buySteps ul li:nth-child(2),
   .buySteps ul li:nth-child(4),
@@ -791,7 +814,6 @@ svg.vtex-omnishipping-1-x-svg path{
   }
 
   .container.container-main.container-cart{
-    max-width: 90%;
     width: 90%;
   }
 
@@ -854,7 +876,8 @@ svg.vtex-omnishipping-1-x-svg path{
   }
 
   .buySteps ul{
-    width: 80%;
+    width: 100%;
+    max-width: 1280px;
     margin: 0 auto;
   }
 
@@ -943,8 +966,8 @@ svg.vtex-omnishipping-1-x-svg path{
 
 @media screen and (min-width: 1366px) {
   .container.container-main.container-cart{
-    max-width: 70%;
-    width: 70%;
+    max-width: 1280px;
+    width: 100%;
   }
   .cart-template.full-cart .summary-template-holder{
     width: 25%;
