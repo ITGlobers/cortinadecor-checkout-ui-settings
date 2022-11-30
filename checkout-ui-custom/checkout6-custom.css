@@ -1,0 +1,1382 @@
+@font-face {
+  font-family : "Cortinadecor Icons";
+  src         : url("https://cortinadecor.vteximg.com.br/arquivos/cortinadecor-icons.woff.css") format("woff");
+  font-weight : 400;
+  font-style  : normal;
+  font-display: swap
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 100;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-ThinItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 100;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-Thin.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-Black.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 900;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-BlackItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-BoldItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 200;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 200;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-ExtraLightItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-LightItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-Italic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-Medium.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-MediumItalic.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style : normal;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-style : italic;
+  src        : url(https://cortinadecor.vtexassets.com/assets/vtex/assets-builder/cortinadecor.store-theme/2.0.3/fonts/Montserrat-SemiBoldItalic.ttf);
+}
+
+@font-face {
+  font-family : Raleway;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/raleway/raleway-v13-latin-300.woff2") format("woff2");
+  font-style  : normal;
+  font-weight : 300
+}
+
+@font-face {
+  font-family : Lobster;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Lobster.otf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Indie Flower;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/IndieFlower.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Pacifico;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Pacifico.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Kavoon;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Kavoon.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Peralta;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Peralta.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Henny Penny;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/HennyPenny.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : James Stroker;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/JamesStroker.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Sybil Green;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/SybilGreen.otf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Lemon Milk;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/LemonMilk.otf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Cherl;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Cherl.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Janda Happy Day;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/JandaHappyDay.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Monoton;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/Monoton.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+@font-face {
+  font-family : Walto Graph;
+  font-display: swap;
+  src         : url("https://www.cortinadecor.com/public/fonts/infantiles/WaltoGraph.ttf");
+  font-weight : 400;
+  font-style  : normal
+}
+
+
+* {
+  box-sizing    : border-box;
+  margin        : 0;
+  padding       : 0;
+  font-family   : Montserrat, Verdana, sans-serif;
+  line-height   : 1.42857143;
+  letter-spacing: .3px;
+}
+
+body {
+  font-family   : Montserrat, Verdana, sans-serif;
+  letter-spacing: .3px !important;
+  background    : white !important;
+  height        : 100vh !important;
+  ;
+  padding       : 0;
+  line-height   : 1.42857143;
+  letter-spacing: .3px;
+}
+
+body::before {
+  display: none;
+}
+
+header {
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  padding         : 15px;
+  background-color: #c31632;
+  position        : sticky;
+  top             : 0;
+  z-index         : 3;
+}
+
+header .logo a img {
+  width     : inherit;
+  height    : inherit;
+  max-height: 35px;
+}
+
+header .redirect ul {
+  list-style     : none;
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  margin         : 0;
+}
+
+header .redirect ul li.user {
+  font-size   : 25px;
+  font-weight : 400;
+  font-family : Cortinadecor Icons;
+  margin-right: 10px;
+}
+
+header .redirect ul li.user a i::before {
+  content    : "\E896";
+  font-size  : 25px;
+  font-weight: 400;
+  font-family: Cortinadecor Icons;
+}
+
+header .redirect a {
+  text-decoration: none;
+  color          : white;
+
+}
+
+header .redirect .languajes ul {
+  display: flex;
+  gap    : 10px;
+}
+
+header .redirect .languajes ul li:nth-child(2) {
+  padding     : 0 5px;
+  border-left : 1px solid white;
+  border-right: 1px solid white;
+}
+
+header .redirect a.active {
+  text-decoration: none;
+  color          : white;
+  font-weight    : bold;
+}
+
+.buySteps {
+  padding         : 10px;
+  background-color: #fff;
+  color           : #545b67;
+  box-shadow      : 0 0 10px 0 rgba(0, 0, 0, .15);
+  position        : sticky;
+  top             : 3.7rem;
+  z-index         : 3;
+}
+
+.buySteps ul {
+  display        : flex;
+  justify-content: space-around;
+  align-items    : center;
+  list-style     : none;
+  margin         : 0;
+}
+
+
+.buySteps ul li svg {
+  display: none;
+}
+
+.buySteps ul li:nth-child(1),
+.buySteps ul li:nth-child(3),
+.buySteps ul li:nth-child(5),
+.buySteps ul li:nth-child(7) {
+  margin-bottom: 7px;
+  border       : 0;
+  color        : #e7e9ec;
+}
+
+.buySteps ul li.current {
+  color: #c31632;
+}
+
+.buySteps ul li:nth-child(2),
+.buySteps ul li:nth-child(4),
+.buySteps ul li:nth-child(6) {
+  position     : relative;
+  height       : 1px;
+  width        : 10%;
+  border-top   : 1px solid #e7e9ec;
+  color        : #e7e9ec;
+  margin-bottom: 0.5rem;
+}
+
+.buySteps ul li:nth-child(2)::after,
+.buySteps ul li:nth-child(4)::after,
+.buySteps ul li:nth-child(6)::after {
+  font-family: Cortinadecor Icons;
+  font-size  : 12px;
+  content    : "\E801";
+  position   : absolute;
+  top        : 50%;
+  left       : calc(100% - 8px);
+  transform  : translateY(-50%);
+}
+
+.buySteps ul li.current:nth-child(2),
+.buySteps ul li.current:nth-child(4),
+.buySteps ul li.current:nth-child(6) {
+  color     : #c31632;
+  border-top: 1px solid #c31632;
+}
+
+.buySteps ul li a {
+  text-decoration: none;
+  text-transform : uppercase;
+  font-weight    : 700;
+  font-size      : 12px;
+  color          : inherit;
+}
+
+footer {
+  background-color: #c31632;
+  padding         : 0 1.2rem;
+  color           : white;
+  position        : fixed;
+  bottom          : 0;
+  width           : 100%;
+}
+
+footer .copyright {
+  text-align: center;
+  color     : white;
+}
+
+footer .copyright p {
+  margin       : 0;
+  margin-bottom: 5px;
+}
+
+footer .copyright p a {
+  color          : white;
+  text-decoration: none;
+}
+
+.summary-template-holder .cart-links-bottom {
+  position: relative;
+  z-index : 2;
+}
+
+#cart-to-orderform {
+  font-size    : 0;
+  border-radius: 30px;
+  padding      : 10px !important;
+}
+
+#cart-to-orderform::after {
+  content       : "NEXT";
+  font-size     : 16px;
+  font-weight   : 600;
+  letter-spacing: .3px;
+  border-radius : 30px;
+  position      : relative;
+  top           : 4px;
+  margin        : auto;
+  font-family   : Montserrat, Verdana, sans-serif !important;
+}
+
+.cart-template-holder {
+  background-color: #f2f2f2;
+}
+
+.cart-template-holder .cart {
+  background   : #f2f2f2;
+  border-radius: 0;
+}
+
+.full-cart .cart table.table.cart-items {
+  border-bottom: 1px solid #c31632;
+}
+
+.full-cart .cart table.table.cart-items thead {
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.full-cart .cart table.table.cart-items tbody {
+  border-top: 1px solid #c31632;
+}
+
+.full-cart .cart table.table.cart-items thead div {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  width          : 100%;
+}
+
+.full-cart .cart table.table.cart-items thead div.textContainer {
+  display        : flex;
+  align-items    : center;
+  justify-content: flex-start;
+  gap            : 0.5rem;
+  width          : 50%;
+}
+
+.full-cart .cart table.table.cart-items thead div.textContainer h2 {
+  border-right  : 2px solid black;
+  text-transform: uppercase;
+  font-weight   : 600;
+  font-size     : 16px;
+  margin        : 0;
+  padding-right : 0.2rem;
+  line-height   : 1.1;
+}
+
+.full-cart .cart table.table.cart-items thead div.textContainer p {
+  font-weight   : 400;
+  text-transform: uppercase;
+  font-size     : 16px;
+  margin        : 0;
+}
+
+.full-cart .cart table.table.cart-items thead .send-cart-link {
+  display        : block;
+  color          : black;
+  font-weight    : 600;
+  font-size      : 12px;
+  text-decoration: none;
+  width          : 30%;
+  text-align     : right;
+}
+
+.full-cart .cart table.table.cart-items thead .send-cart-link i::before {
+  content    : "\E85C";
+  font-size  : 12px;
+  font-weight: 400;
+  font-family: "Cortinadecor Icons";
+}
+
+.table.cart-items i.icon.icon-remove.item-remove-ico::before {
+  content    : "\E88E" !important;
+  font-family: "Cortinadecor Icons";
+  font-size  : 25px;
+  color      : black;
+}
+
+.table.cart-items td.quantity {
+  border: none !important;
+}
+
+.table.cart-items td.quantity [id*="item-quantity-"] {
+  border       : 1px solid #545b67;
+  height       : 32px !important;
+  width        : 25px !important;
+  font-family  : Montserrat;
+  font-size    : 12px;
+  border-radius: 0px;
+}
+
+.table.cart-items td.quantity [id*="item-quantity-change"].item-quantity-change-decrement {
+  font-weight              : 400;
+  background-color         : white;
+  border                   : 1px solid #545b67;
+  border-top-left-radius   : 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.table.cart-items td.quantity [id*="item-quantity-change"].item-quantity-change-increment {
+  font-weight               : 400;
+  background-color          : white;
+  border                    : 1px solid #545b67;
+  border-top-right-radius   : 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.table.cart-items td.quantity .item-quantity-change-decrement i::before,
+.table.cart-items td.quantity .item-quantity-change-increment i::before {
+  font-weight: 400;
+}
+
+.table.cart-items td.product-price .list-price {
+  font-size      : 12px;
+  color          : black;
+  text-decoration: line-through;
+}
+
+.table.cart-items td.product-price .best-price {
+  font-size: 12px;
+  color    : black;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .couponsTitle {
+  list-style     : none;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  font-size      : 12px;
+  font-weight    : 600;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .couponsTitle::after {
+  content    : "\E8A2";
+  color      : black;
+  font-size  : 20px;
+  font-family: "Cortinadecor Icons";
+  font-weight: 400;
+  line-height: 1.42857143;
+  transform  : rotate(45deg);
+  transition : all .5s;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper[open] .couponsTitle::after {
+  transform: rotate(0deg);
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap {
+  padding: 0.5rem 0;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span:first-child {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon,
+.orderform-template .cart-template.mini-cart .summary-template-holder #cart-coupon {
+  width        : 50%;
+  color        : #545b67;
+  border-radius: 1.7rem;
+  box-shadow   : none;
+  border       : 1px solid #545b67;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon::placeholder {
+  color         : #545b67;
+  opacity       : 1;
+  font-size     : 12px;
+  line-height   : 1.42857143;
+  letter-spacing: .3px;
+  ;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon:active,
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span input#cart-coupon:focus {
+  border-bottom-color: #545b67;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span #cart-coupon-add {
+  width           : 40%;
+  background-color: #c31632;
+  color           : white;
+  font-weight     : 600;
+  border-radius   : 1.7rem;
+  font-size       : 12px;
+  border          : 1px solid #c31632;
+  transition      : .5s;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .couponsWrapper .coupon-column.summary-coupon-wrap .coupon-fields span #cart-coupon-add:hover {
+  background-color: #8c1024;
+  border          : 1px solid #8c1024;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .coupon-column.summary-coupon-wrap {
+  display: none;
+}
+
+.totalizers.summary-totalizers.cart-totalizers .totalizers-list {
+  border: none;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot tr {
+  border-top: 1px solid #c31632 !important;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot .info {
+  font-size: 12px;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot .info::after {
+  font-size  : 12px;
+  content    : "(IVA incl)";
+  margin-left: 2px;
+  font-weight: 400;
+}
+
+.totalizers.summary-totalizers.cart-totalizers tfoot .monetary,
+.orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td.monetary {
+  font-size  : 16px !important;
+  color      : black !important;
+  font-weight: 600 !important;
+}
+
+.orderform-template-holder#payment-data.payment-group-item.active {
+  border-color: #c31632 !important;
+}
+
+.orderform-template .cart-template.mini-cart .summary-totalizers tbody {
+  border: none;
+}
+
+.monetary.free::after,
+.new-product-price.free::after {
+  content: "";
+}
+
+.payments-availables {
+  display        : flex;
+  align-items    : center;
+  justify-content: space-around;
+  margin-top     : 0.8rem;
+  margin-bottom  : 2rem;
+}
+
+.payments-availables span i::before {
+  font-family: "Cortinadecor Icons";
+  font-size  : 25px;
+  font-weight: 400;
+  color      : #bdc2ca;
+}
+
+.payments-availables span:nth-child(1) i::before {
+  content: "\F1F0";
+}
+
+.payments-availables span:nth-child(2) i::before {
+  content: "\F1F1";
+}
+
+.payments-availables span:nth-child(3) i::before {
+  content: "\F1F4";
+}
+
+.payments-availables span:nth-child(4) i::before {
+  content: "\F1F4";
+}
+
+.payments-availables span:nth-child(5) i::before {
+  content: "\F19C";
+}
+
+.payments-availables span:nth-child(6) i::before {
+  content: "\E802";
+}
+
+.trust-seals {
+  font-size: 12px;
+}
+
+.trust-seals h3 {
+  font-weight   : 600;
+  font-size     : 16px;
+  margin-bottom : 1rem;
+  text-transform: uppercase;
+  text-align    : left;
+}
+
+.trust-seals .trust-seals-warranty,
+.trust-seals .trust-seals-payment,
+.trust-seals .trust-seals-opinions {
+  position       : relative;
+  margin-top     : 1.9rem;
+  margin-bottom  : 1.9rem;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  flex-wrap      : wrap;
+}
+
+.trust-seals .trust-seals-opinions {
+  padding-left: 0;
+  flex-wrap   : wrap;
+}
+
+.trust-seals .trust-seals-opinions .opinion-container {
+  display        : flex;
+  justify-content: center;
+  width          : 100%;
+}
+
+.trust-seals #trust-seals-arrows-warranty,
+.trust-seals #trust-seals-arrows-reviews {
+  width: 100%;
+}
+
+.trust-seals .trust-seals-warranty .tabletVersion,
+.trust-seals .trust-seals-opinions .tabletVersion {
+  display: none;
+}
+
+.trust-seals .trust-seals-warranty .desktopVersion,
+.trust-seals .trust-seals-opinions .desktopVersion {
+  display: none;
+}
+
+.trust-seals .opinion-container .rating-stars {
+  margin: auto;
+}
+
+.trust-seals .opinion-container .rating-stars li i::before {
+  content                      : "\E87E";
+  font-family                  : Cortinadecor Icons;
+  font-style                   : normal;
+  font-weight                  : 400;
+  display                      : inline-block;
+  text-decoration              : inherit;
+  text-align                   : center;
+  font-variant                 : normal;
+  text-transform               : none;
+  letter-spacing               : normal;
+  word-wrap                    : normal;
+  white-space                  : nowrap;
+  direction                    : ltr;
+  line-height                  : 1em;
+  -webkit-font-smoothing       : antialiased;
+  -moz-osx-font-smoothing      : grayscale;
+  text-rendering               : optimizeLegibility;
+  -webkit-font-feature-settings: "liga";
+  font-feature-settings        : "liga";
+  vertical-align               : middle;
+  color                        : #f9bf3b;
+}
+
+.trust-seals .arrow-container {
+  position: absolute;
+  top     : -0.95rem;
+}
+
+.trust-seals .arrow-animation {
+  stroke           : #c31632;
+  stroke-dashoffset: 0;
+  width            : 100%;
+  overflow         : hidden;
+}
+
+.trust-seals .icon-container {
+  display: inline-block;
+  width  : auto;
+}
+
+.trust-seals .icon-container i::before {
+  font-family: "Cortinadecor Icons";
+  font-weight: 400;
+  display    : inline-block;
+  text-align : center;
+  line-height: 1.42857143;
+  font-size  : 25px;
+}
+
+.trust-seals .icon-container .icon-guarantee::before {
+  content: "\E843";
+}
+
+.trust-seals .icon-container .icon-lock::before {
+  content: "\E858";
+}
+
+.trust-seals .trustText {
+  display        : flex;
+  align-items    : center;
+  justify-content: flex-start;
+}
+
+.trust-seals .trust-seals-payment .trustText {
+  padding-left: 5rem;
+}
+
+.trust-seals .text-container {
+  display     : inline-block;
+  width       : auto;
+  padding-left: 1.9rem;
+  text-align  : left;
+}
+
+.trust-seals .text-container .subtitle {
+  font-weight: 600;
+  color      : #c31632;
+}
+
+.manufacturingContainer {
+  display         : flex;
+  flex-direction  : column;
+  align-items     : flex-start;
+  justify-content : flex-start;
+  color           : black;
+  text-decoration : none;
+  background-color: #F2F2F9;
+  padding         : 15px 0;
+  margin          : 1rem 0;
+}
+
+.manufacturingContainer .description {
+  display        : flex;
+  align-items    : center;
+  justify-content: flex-start;
+  gap            : 1rem;
+  width          : 100%;
+}
+
+.manufacturingContainer .description::before {
+  content    : "\E88C";
+  font-family: "Cortinadecor Icons";
+  font-weight: 400;
+  font-size  : 25px;
+  padding    : 0 10px 0 20px;
+}
+
+.manufacturingContainer .description .description-title {
+  font-size     : 12px;
+  font-weight   : 600;
+  text-align    : left;
+  text-transform: uppercase;
+  margin        : 5px 0;
+}
+
+.manufacturingContainer .description .description-content {
+  font-size: 12px;
+}
+
+.manufacturingContainer .description .description-content .servicePrice {
+  font-size  : 12px;
+  font-weight: 600;
+}
+
+.manufacturingContainer .description .description-content a {
+  font-size      : 12px;
+  color          : black;
+  text-decoration: none;
+  font-weight    : 600;
+  text-decoration: underline;
+}
+
+.manufacturingContainer .conditions {
+  width     : 100%;
+  text-align: center;
+}
+
+.manufacturingContainer .price {
+  width     : 100%;
+  text-align: center;
+  padding   : 0 15px;
+}
+
+.manufacturingContainer .conditions a {
+  color          : black;
+  text-decoration: none;
+  font-weight    : 600;
+  text-decoration: underline;
+}
+
+.manufacturingContainer .conditions a:hover {
+  font-size: 12px;
+}
+
+.manufacturingContainer .price p {
+  font-size  : 12px;
+  font-weight: 600;
+}
+
+.cart-more-options {
+  background-color: transparent;
+}
+
+#shipping-calculate-link {
+  color: #8c1024;
+}
+
+#orderform-minicart-to-cart {
+  display: none;
+}
+
+.orderform-template .cart-template.mini-cart .quantity {
+  display: none;
+}
+
+.orderform-template .cart-template.mini-cart .summary-template-holder .summary>.summary-coupon-wrap {
+  border: none;
+}
+
+.submit.btn-submit-wrapper {
+  font-weight: 600;
+}
+
+.btn-success {
+  font-weight: 600;
+}
+
+.table.cart-items td.quantity .item-quantity-change i:before {
+  display        : flex;
+  align-items    : center;
+  justify-content: center;
+  font-size      : 12px;
+  font-weight    : inherit;
+}
+
+.orderform-template-holder .step .form-step fieldset p {
+  width        : 100% !important;
+  margin-bottom: 15px;
+}
+
+.orderform-template-holder .step .form-step fieldset p label,
+.input.ship-postalCode label,
+.vtex-omnishipping-1-x-address p label {
+  font-size  : 12px;
+  font-family: Montserrat, Verdana, sans-serif;
+  transition : .5s;
+}
+
+.orderform-template-holder .step .form-step fieldset p label::after,
+.input.ship-postalCode label::after,
+.vtex-omnishipping-1-x-address p label::after {
+  content: "*";
+}
+
+.orderform-template-holder .step .form-step fieldset p input,
+.input.ship-postalCode input,
+.vtex-omnishipping-1-x-address p input {
+  border       : none !important;
+  border-bottom: 1px solid black !important;
+  border-radius: 0 !important;
+  box-shadow   : none !important;
+  font-size    : 12px;
+  font-family  : Montserrat, Verdana, sans-serif;
+}
+
+.orderform-template .cart-template.mini-cart .item .price {
+  display: none;
+}
+
+.orderform-template-holder .step .form-step fieldset p input::placeholder {
+  opacity: 0;
+}
+
+.orderform-template-holder .step .form-step fieldset p span.help.error {
+  width: 100%;
+}
+
+#cart-coupon-add {
+  border: 1px solid #c31632;
+  color : #c31632;
+}
+
+#cart-coupon-add:hover {
+  border          : 1px solid #8c1024;
+  color           : #8c1024;
+  background-color: rgba(192, 22, 50, 0.4);
+}
+
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active .payment-group-item-text::before {
+  background  : #c31632;
+  border-color: #c31632;
+  box-shadow  : inset 0 0 0 3px #fff;
+}
+
+.orderform-template-holder .step .form-step fieldset p input.error,
+.vtex-omnishipping-1-x-address p input.error {
+  border-bottom: 1px solid #c31632 !important;
+}
+
+.client-profile-data ul.links.unstyled a {
+  color      : black !important;
+  font-family: Montserrat, Verdana, sans-serif;
+  font-weight: 600;
+}
+
+.accordion-group .accordion-heading .accordion-toggle span::before,
+.accordion-group.shipping-data .accordion-heading .accordion-toggle::before {
+  display: none !important;
+}
+
+.accordion-group .accordion-heading .accordion-toggle span::after,
+#shipping-data .accordion-group .accordion-heading .accordion-toggle::after {
+  content      : "";
+  display      : block;
+  width        : 40px;
+  border-bottom: 3px solid #c31632;
+  margin-top   : 10px;
+}
+
+.accordion-group .accordion-heading .accordion-toggle span.payment-edit-link::after {
+  display: none;
+}
+
+#btn-go-to-payment {
+  margin: 0.5rem auto
+}
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap.active,
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap:hover {
+  border-color: #c31632;
+}
+
+.orderform-template-holder #payment-data .v-custom-payment-item-wrap .payment-group-item.active {
+  border-bottom: #c31632;
+  background   : rgba(192, 22, 50, 0.5);
+}
+
+.icon-edit::before {
+  content    : "\E863";
+  font-family: Cortinadecor Icons;
+  font-size  : 16px;
+  color      : #8c1024;
+}
+
+.orderform-template-holder .step.shipping-data .vtex-omnishipping-1-x-summaryChange {
+  border-color: #c31632;
+  background  : rgba(192, 22, 50, 0.2);
+  color       : #8c1024;
+}
+
+.orderform-template .cart-template.mini-cart .summary-template-holder #cart-coupon {
+  width: 100%;
+}
+
+.cart-more-options .srp-container .onda-v1 .blue,
+#force-shipping-fields,
+.input.ship-postalCode a {
+  color: #c31632;
+}
+
+.srp-shipping-current-single__bullet.flex-none.mr3 .srp-icon-radio-selected path,
+svg.vtex-omnishipping-1-x-svg path {
+  fill: #c31632;
+}
+
+#go-to-shipping {
+  font-size: 16px !important;
+}
+
+#payment-data-submit {
+  font-family   : Verdana, sans-serif !important;
+  text-transform: uppercase;
+  font-size     : 16px !important;
+}
+
+.cartButtons {
+  width          : 100%;
+  display        : flex;
+  align-items    : center;
+  justify-content: space-between;
+  padding        : 0px 30px;
+}
+
+.cartButtons .goBack {
+  width: 70%;
+}
+
+.cartButtons .goBack a {
+  font-size      : 16px;
+  text-transform : uppercase;
+  font-weight    : 700;
+  text-decoration: underline;
+  color          : #c31632;
+  display        : flex;
+  align-items    : center;
+  justify-content: flex-start;
+  gap            : 5px;
+}
+
+.cartButtons .goBack a:hover {
+  text-decoration: none;
+}
+
+.cartButtons .goBack a i::before {
+  content        : "\E800";
+  font-size      : 25px;
+  font-weight    : bold;
+  font-family    : Cortinadecor Icons;
+  text-decoration: none;
+}
+
+.cartButtons .goForward {
+  width: 30%;
+}
+
+.cartButtons .goForward a {
+  width: 100%;
+}
+
+/*---------------------TABLET-------------------*/
+
+@media screen and (min-width: 768px) {
+
+  .buySteps ul li:nth-child(2),
+  .buySteps ul li:nth-child(4),
+  .buySteps ul li:nth-child(6) {
+    width: 15%;
+  }
+
+  .container.container-main.container-cart {
+    width: 90%;
+  }
+
+  .summary .summaryTitle {
+    font-size     : 16px;
+    font-weight   : 600;
+    text-transform: uppercase;
+    margin        : 0.7rem 0 2rem 0;
+  }
+
+  .summary .summaryTitle::after {
+    content      : "";
+    display      : block;
+    width        : 40px;
+    border-bottom: 1px solid #c31632;
+    margin-top   : 10px;
+  }
+
+  .trust-seals .trust-seals-warranty,
+  .trust-seals .trust-seals-payment,
+  .trust-seals .trust-seals-opinions {
+    margin-bottom: 1rem;
+    margin-left  : 10%;
+  }
+
+  .trust-seals .trust-seals-payment .trustText {
+    padding-left: 0;
+  }
+
+  .trust-seals .trust-seals-warranty .trustText {
+    margin-left: -4.5rem;
+  }
+
+  .trust-seals .trust-seals-opinions {
+    padding-left: 0;
+  }
+
+  .trust-seals #trust-seals-arrows-warranty,
+  .trust-seals #trust-seals-arrows-reviews {
+    width: 100%;
+  }
+
+  .trust-seals .trust-seals-warranty .tabletVersion,
+  .trust-seals .trust-seals-opinions .tabletVersion {
+    display: inline;
+  }
+
+  .trust-seals .trust-seals-warranty .mobileVersion,
+  .trust-seals .trust-seals-opinions .mobileVersion {
+    display: none;
+  }
+
+  footer {
+    padding: 2rem 5% 0 5%;
+  }
+
+  footer .links .dating {
+    padding-top: 1rem;
+    border-top : 1px solid white;
+  }
+
+  footer .links .accordion {
+    padding-top: 2rem;
+    border-top : 1px solid white;
+  }
+}
+
+/*---------------------DESKTOP------------------*/
+@media screen and (min-width: 1000px) {
+
+  .manufacturingContainer .description {
+    width: 65%;
+  }
+
+  .manufacturingContainer .conditions {
+    width: 25%;
+  }
+
+  .manufacturingContainer .price {
+    width     : 10%;
+    text-align: left;
+  }
+
+  .buySteps ul {
+    width    : 100%;
+    max-width: 1280px;
+    margin   : 0 auto;
+  }
+
+  header .logo {
+    width: 15%;
+  }
+
+  .preFooter {
+    padding: 1rem 10%
+  }
+
+  .cart-template-holder {
+    background-color: white;
+  }
+
+  .cart-template-holder .cart {
+    background-color: white;
+  }
+
+  .cart-template.full-cart {
+    width: 100%;
+  }
+
+  .cart-template.full-cart .summary-template-holder {
+    width: 30%;
+  }
+
+  .cart-template.full-cart .cart-template-holder {
+    width: 70%;
+  }
+
+  .trust-seals .trust-seals-warranty .tabletVersion,
+  .trust-seals .trust-seals-opinions .tabletVersion {
+    display: none;
+  }
+
+  .trust-seals .trust-seals-warranty .desktopVersion,
+  .trust-seals .trust-seals-opinions .desktopVersion {
+    display: inline;
+  }
+
+  .trust-seals .trust-seals-warranty,
+  .trust-seals .trust-seals-payment,
+  .trust-seals .trust-seals-opinions {
+    margin-left: 0;
+  }
+
+  .trust-seals #trust-seals-arrows-warranty,
+  .trust-seals #trust-seals-arrows-payment,
+  .trust-seals #trust-seals-arrows-reviews {
+    left : 0;
+    width: 105%;
+  }
+
+  .table.cart-items tbody tr .v-custom-product-item-wrap {
+    padding: 0.5rem 0;
+  }
+
+  .table.cart-items tbody tr {
+    border: none;
+  }
+
+  .table.cart-items tbody tr td.item-remove {
+    margin: auto !important
+  }
+
+  .table.cart-items tbody tr td.product-image {
+    width: 8%;
+  }
+
+  .table.cart-items td.product-image a,
+  .table.cart-items td.product-image img {
+    width: 45px !important;
+  }
+
+  .manufacturingContainer {
+    flex-direction : row;
+    align-items    : center;
+    justify-content: flex-start;
+  }
+
+  footer section {
+    width : 80%;
+    margin: auto;
+  }
+
+  footer .links {
+    flex-direction: row;
+    gap           : 2rem;
+  }
+
+  footer .links .dating {
+    min-width : 25%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .container.container-main.container-cart {
+    max-width: 1280px;
+    width    : 100%;
+  }
+
+  .cart-template.full-cart .summary-template-holder {
+    width: 25%;
+  }
+
+  .cart-template.full-cart .cart-template-holder {
+    width: 75%;
+  }
+}
+
+
+.table.cart-items td.product-name a,
+.table.cart-items td.product-name a:hover {
+  color          : #000;
+  font-weight    : 600;
+  text-decoration: none;
+  text-transform : uppercase;
+  font-size      : 12px;
+}
+
+.table.cart-items tbody tr td.product-name .seller {
+  display: none;
+}
