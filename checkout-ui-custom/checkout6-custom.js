@@ -94,72 +94,50 @@ let changeProductsheader = () => {
 let moveTrustValues = () => {
   let seals = document.querySelector('.trust-seals');
   let reference = document.querySelector('.cart-links.cart-links-bottom');
+  let mobileReference = document.querySelector('.summary-template-holder');
 
-  reference.append(seals);
+  if(innerWidth < 690){
+    mobileReference.append(seals);
+  }else{
+    reference.append(seals);
+  }
   seals.style.display = "block";
 }
 
-let isFirstTime = true;
 let messageManufacturing = () => {
-  if(document.querySelectorAll('.table.cart-items .product-item').length === 0 || isFirstTime){
     let reference = document.querySelector('.cart-template .cart .table.cart-items');
-    let container = document.createElement('div');
-    container.classList.add('manufacturingContainer');
-    let toInsert = '';
-    toInsert += ' <div class="description">';
-    toInsert += '   <div>'
-    toInsert += '     <h3 class="description-title">24H Manufacturing</h3>';
-    toInsert += '     <p class="description-content">';
-    toInsert += '       Activate manufacturing in 24 hours and get priority on your order';
-    toInsert += '       <b>just for</b> <span class="servicePrice">$ 9.95</span> you can activate <b>manufacturing in 24h</b> for all compatible products <a href="/terms-of-use">Terms and conditions of service</a>';
-    toInsert += '     </p>';
-    toInsert += '   </div>'
-    toInsert += ' </div>';
-    toInsert += ' <div class="conditions">';
-    toInsert += '   <p>';
-    toInsert += '     Order before <b>12:00</b> and we will sending to you <b>tomorrow</b></br><a href="#">Activate</a>';
-    toInsert += '   </p>';
-    toInsert += ' </div>';
-    toInsert += ' <div class="price">';
-    toInsert += '   <p>';
-    toInsert += '     $ 9.95';
-    toInsert += '   </p>';
-    toInsert += ' </div>';
-    container.innerHTML = toInsert;
-    reference.append(container);
-    isFirstTime = false;
-  }else{
-    let reference = document.querySelector('.cart-template .cart');
     let element = document.querySelector('.manufacturingContainer');
-    let products = document.querySelectorAll('.table.cart-items .product-item').length
-    if(element !== null && products === 0){
-      reference.removeChild(element);
-    }
-  }
+    reference.append(element);
 }
 
-let navButtons = () => function(){
-  if(document.querySelectorAll('.table.cart-items .product-item').length === 0 || isFirstTime){
-    let reference = document.querySelector('.cart-template .cart');
-    let container = document.createElement('div');
-    container.classList.add('cartButtons');
-    let toInsert = '';
-      toInsert += ' <div class="goBack">';
-      toInsert += '   <a href="/" class="goBack-link"><i class="icon icon-angle-left bold"></i>Return</a>'
-      toInsert += ' </div>';
-      toInsert += ' <div class="goForward">';
-      toInsert += '   <a href="#/orderform" target="_self" data-event="cartToOrderform" id="cart-to-orderform" class="btn btn-large btn-success pull-left-margin btn-place-order" data-i18n="cart.finalize" data-bind="click: cart.next">NEXT</a>';
-      toInsert += ' </div>';
-      container.innerHTML = toInsert;
-    reference.after(container);
-  }else{
-    let reference = document.querySelector('#cartLoadedDiv');
-    let element = document.querySelector('.cartButtons');
-    let products = document.querySelectorAll('.table.cart-items .product-item').length
-    if(element !== null && products === 0){
-      reference.removeChild(element);
+let observerF = () => {
+  const targetNode = document.querySelector('.empty-cart-content');
+
+  const config = { attributes: true, childList: true, subtree: true };
+
+  const callback = () => {
+    let navContainer = document.querySelector('.cartButtons');
+    let manufacturingMessage = document.querySelector('.manufacturingContainer');
+    if(document.querySelector('.empty-cart-content').style.display === "none"){
+      navContainer.style.display = "flex";
+      manufacturingMessage.style.display = "flex";
+    }else{
+      navContainer.style.display = "none";
+      manufacturingMessage.style.display = "none";
     }
-  }
+  };
+
+  const observer = new MutationObserver(callback);
+
+  observer.observe(targetNode, config);
+}
+
+
+let navButtons = () => {
+  let element = document.querySelector('.cartButtons');
+  let reference = document.querySelector('.cart-template .cart');
+  console.log({reference})
+  reference.after(element);
 }
 
 let summaryTitle = () => {
@@ -170,12 +148,47 @@ let summaryTitle = () => {
   reference.insertBefore(toInsert, reference.querySelector('div.summary-totalizers'));
 }
 
+let trustSealsFix = function(){
+  let warrantyContainer = document.querySelector('#trust-seals-arrows-warranty');
+  let ratesContainer = document.querySelector('#trust-seals-arrows-reviews');
+  let warrantyArrow = warrantyContainer.querySelector("svg.mobileVersion path.path");
+  let ratesArrow = ratesContainer.querySelector("svg.mobileVersion path.path");
+  let warrantyDimension = warrantyContainer.clientWidth;
+  let ratesDimension = ratesContainer.clientWidth;
+
+  let warrantyPath = warrantyArrow.getAttribute('d').split(' ');
+  let ratesPath = ratesArrow.getAttribute('d').split(' ');
+
+  warrantyPath[4] = warrantyDimension - 40;
+  warrantyPath[6] = warrantyDimension;
+  warrantyPath[8] = warrantyDimension;
+  warrantyPath[10] = warrantyDimension - 40;
+
+  ratesPath[4] = ratesDimension - 40;
+  ratesPath[6] = ratesDimension;
+  ratesPath[8] = ratesDimension;
+  ratesPath[10] = ratesDimension - 40;
+
+  warrantyPath = warrantyPath.join(" ");
+  ratesPath = ratesPath.join(" ");
+
+  warrantyArrow.setAttribute('d', warrantyPath);
+  ratesArrow.setAttribute('d', ratesPath);
+
+}
+
+window.addEventListener('resize', function(){
+  trustSealsFix();
+  moveTrustValues();
+});
+
 $(window).on("orderFormUpdated.vtex", function(){
   console.log("actualice el checkout");
   setTimeout(function(){
     changeProductsheader();
     messageManufacturing();
     navButtons();
+    trustSealsFix();
   },500);
 })
 
@@ -187,7 +200,13 @@ setTimeout(function(){
   if(innerWidth > 1000){
     summaryTitle();
   }
-  setTimeout(navButtons(),500);
+  setTimeout(function(){
+    navButtons()
+  },500);
+  setTimeout(function(){
+    trustSealsFix();
+  },1000)
+  observerF();
 },500)
 
 
